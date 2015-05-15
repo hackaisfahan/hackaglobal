@@ -33,6 +33,13 @@ $app->map('/events/create', function () use ($app) {
 	//get cities Id from form and create relation to cities	
 	$event -> cities_id = $app -> request() -> post('cities_id');
 	
+	
+	// to do list 
+	// upload file must be complate in future 
+	// var_dump($app -> request() -> post()); exit;	
+	// $event -> file = $app -> request() -> post('file'); 
+	
+	
 	//implode start and end date for create simple timeStamp in table
 	$start_time = implode(" ", array($app -> request() -> post('start_date'), $app -> request() -> post('start_time')));
 	$end_time = implode(" ", array($app -> request() -> post('end_date'), $app -> request() -> post('end_time')));
@@ -42,6 +49,10 @@ $app->map('/events/create', function () use ($app) {
 	
 	//address of event 
 	$event -> address = (string)$app -> request() -> post('address');
+	
+	//social media link 
+	$event -> twitter = $app -> request() -> post('twitter'); 
+	$event -> facebook = $app -> request() -> post('facebook');
 	
     R::begin();
     try {
