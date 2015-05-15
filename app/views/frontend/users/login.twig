@@ -1,11 +1,20 @@
 {% extends "layouts/default.twig" %}
 
 {% block content %}
-    <form action="" method="post">
-        <input type="email" name="email" id="email" title="Email"/>
-        <br/>
-        <input type="password" name="password" id="password" title="Password"/>
-        <br/>
-        <input type="submit" value="Login"/>
-    </form>
+        	<h1 class="content-header">ورود به محیط کاربری</h1>
+            <form action="" method="post" id="login" class="clear">
+         
+                <div class="form-obj">
+                    <span class="require">ایمیل : *</span>
+                	<input type="email" name="email" id="email" title="Email"/>
+                </div>
+                <div class="form-obj">
+                    <span class="require">رمز عبور : *</span>
+                	<input type="password" name="password" id="password" title="Password"/>
+				</div>      
+                      
+                <div class="form-obj submit">               
+	                <input type="submit" value="ثبت نام" class="signup"/>
+                </div>
+            </form>
 {% endblock %}

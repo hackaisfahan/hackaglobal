@@ -1,17 +1,277 @@
-<html>
-	<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>هاکا گلوبال</title>
+<style>
+	*{direction:rtl;}
+	@font-face {font-family: 'b koodak'; src: url('fonts/BKoodakBold.eot') format('eot'),url('fonts/BKoodakBold.woff') format('woff'),url('fonts/BKoodakBold.ttf') format('truetype');}
+	BODY{padding:0;margin:0;font-family:Tahoma, Geneva, sans-serif;font-size:12px;text-align:justify;line-height:2em;}
+	#header{height:55px;max-width:788px;margin:auto;padding-top:15px;padding-right:10px;position:relative;}
+	#header #mini-logo{position:absolute;left:10px;top:20px;}
+	#header-logo{background-color:#cb5201;}
+	#header-logo .hlpic{width:100%;max-width:798px;margin:auto;display:block;}
+	
+	#hacka-about {max-width:798px;margin:auto;margin-top:10px;position:relative;}
+	.clear:after{content:" ";clear:both;height:0px;visibility:visible;display:block;overflow:hidden;}
+	#hacka-about H2{color:#cb5201;font-family:'b koodak'}
+	#hacka-about > .half{width:49%;float:right;}
+	#hacka-about .left{float:left;}
+	#hacka-about .left IMG{max-width:306px;margin:auto;display:block;margin-top:3%;}
+	
+
+	.btn{
+		min-width:50px;
+		display:inline-block;
+		padding: 0px 12px 0px 12px;
+		text-align:center;	
+		border:solid 1px #ff6804;
+		color:#93430d;
+		font-family:'b koodak';
+		text-decoration:none;
+		font-weight:bold;
+		margin-left:5px;
+		cursor:pointer;
+		background: #ffa44f; /* Old browsers */
+		background: -moz-linear-gradient(top, #ffa44f 0%, #ff6e11 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa44f), color-stop(100%,#ff6e11)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #ffa44f 0%,#ff6e11 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #ffa44f 0%,#ff6e11 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #ffa44f 0%,#ff6e11 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #ffa44f 0%,#ff6e11 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa44f', endColorstr='#ff6e11',GradientType=0 ); /* IE6-9 */		
+		box-shadow: 0px 4px 1px #aa4100;
+		border-radius:3px;
+	}
+	
+	.btn:hover{
+		background: #ff7619; /* Old browsers */
+		background: -moz-linear-gradient(top, #ff7619 0%, #ff994c 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff7619), color-stop(100%,#ff994c)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #ff7619 0%,#ff994c 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #ff7619 0%,#ff994c 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #ff7619 0%,#ff994c 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #ff7619 0%,#ff994c 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7619', endColorstr='#ff994c',GradientType=0 ); /* IE6-9 */
+	}
+	.btn:active{
+		-webkit-box-shadow: inset 0px 3px 10px -3px rgba(0,0,0,0.67);
+		-moz-box-shadow: inset 0px 3px 10px -3px rgba(0,0,0,0.67);
+		box-shadow: inset 0px 3px 10px -3px rgba(0,0,0,0.67);
+	}
+	.btn.large{
+		display: block;
+		padding: 25px 0 30px;
+		margin: 10px;
+		font-size: 24px;		
+		background:#FFF;
+	}
+	.btn.large:hover{background:#e35b00}
+	
+	.clear-both{display:block !important;clear:both !important;float:none !important;min-height:1px !important;}
+
+
+	#hacka-about .info{width:225px;height:240px;float:right;margin-top:30px;position:relative;overflow:hidden;border-radius:4px;}
+	#hacka-about .info.i1{background:url(pic/info1.jpg) center 60px no-repeat;}
+	#hacka-about .info.i2{margin-right:54px;margin-left:54px;background:url(pic/info2.jpg) center 90px no-repeat;}
+	#hacka-about .info.i3{float:left;background:url(pic/info3.jpg) center 80px no-repeat;}
+	
+	
+	
+	
+	#hacka-about .info H2{display:block;text-align:center;margin:0;padding:10px;background:#e35b00;color:#FFF;}
+	
+	#hacka-about .info SPAN{display:block;position:absolute;top:100%;left:0;right:0;bottom:0px;text-align:center;background:rgba(0,0,0,0.7);color:#FFF;font-family:'b koodak';font-size:2em;line-height:1.7em;padding-top:48px;transition:all .2s;}
+	#hacka-about .info:hover SPAN{top:44px;}
+	
+	#hacka-about .new-events{margin-top:30px;padding:0 10px;}
+	#hacka-about .new-events .event{height:100px;border:solid 1px #d5d5d5;border-radius:4px;float:right;width:48%;margin-bottom:20px;}
+	#hacka-about .new-events .event:nth-child(even){float:left;}
+	#hacka-about .new-events .event:last-child:nth-child(odd){float:none;width:100%;clear:both;}
+	
+	#hacka-about .new-events .event .img{float:right;margin:3px 4px;overflow:hidden;border-radius:3px; filter: grayscale(100%);-webkit-filter: grayscale(100%);transition:all .2s;}
+	#hacka-about .new-events .event:hover .img{ filter: grayscale(0%);-webkit-filter: grayscale(0%);}
+	#hacka-about .new-events .event H2{margin:5px 2px;}
+	#hacka-about .new-events .event SPAN{display:block;margin-bottom:10px;}
+	#hacka-about .new-events .event .keys{text-align:left;padding-left:0px;}
+	#hacka-about .new-events .event .keys .btn{background:#e35b00;box-shadow:none;color:#FFF;}
+	
+	#footer1{background:#cb5201;color:#FFF;margin-top:20px;}
+	#footer2{background:#ac4500;color:#FFF;}
+	
+	#footer1>div,#footer2>div{max-width:798px;margin:auto;min-height:100px;}
+	
+	#footer1>div{background:url(pic/hacka-logo-footer.png) 10px center no-repeat;}
+	#footer2>div{background:url(pic/hacka-sponsor.png) center center no-repeat;background-size:contain}
+	#footer1>div A{color:#FFF;text-decoration:none;display:inline-block;margin-left:5px;padding-top:34px;}
+	#footer1>div A:after{content:'.';visibility:visible;display:inline-block;margin-right:9px;color:#FFF !important;font-size:24px;font-family:'b koodak';}
+	#footer1>div A.page-up:after,#footer1>div A:last-child:after{content:'';visibility:hidden;}
+	#footer1>div A:hover{color:#FF0;}
+	#footer1>div A.page-up{width:29px;height:29px;display:inline-block;background:url(pic/page-up.png) center center no-repeat;margin-left:20px;}
+	
+
+	#page > #content{max-width:797px;min-height:100px;margin:auto;}
+	#page > #content .content-header{display:block;background:#e35b00;color:#FFF;border-radius:3px;font-family:'b koodak';padding:8px 20px;margin-left:10px;margin-right:10px;}
+	#page > #content FORM{max-width:700px;margin:auto;display:block;}
+	#page > #content FORM .form-obj{width:49%;float:right;text-align:right;margin-bottom:20px;}
+	#page > #content FORM .form-obj.submit{text-align:center;padding-top:10px;}
+	#page > #content FORM .form-obj SPAN{display:block;font-family:'b koodak';font-size:16px;}#page > #content FORM .form-obj SPAN.require{color:#ff6600;}
+	#page > #content FORM .form-obj INPUT:not([type='submit']){
+		width: 90%;
+		height: 39px;
+		border-radius: 4px;
+		border: solid 1px #ececec;				
+		outline:none;
+		padding-right:10px;
+		padding-left:10px;
+	}
+	#page > #content FORM .form-obj INPUT:not([type='submit']):focus{border-color:#ff6600;}
+	#page > #content FORM .form-obj:nth-child(even){float:left;}
+	#page > #content FORM .form-obj:last-child:nth-child(odd){float:none;width:100%;clear:both;}
+	
+	#page > #content FORM .form-obj INPUT[type=submit]{display:block;border:none;padding:12px 55px ;margin:auto;font-family:'b koodak';font-size:18px;background:#AAA;color:#FFF;cursor:pointer;border-radius:4px;}
+	#page > #content FORM .form-obj INPUT[type=submit].signup{display:block;border:none;padding:12px 70px 12px 40px;margin:auto;font-family:'b koodak';font-size:18px;background:url(pic/register-btn.png) 105px center no-repeat #84bb00;color:#FFF;cursor:pointer;border-radius:4px;}
+	#page > #content FORM .form-obj INPUT[type=submit].signup:hover{background-color:#63aa00}
+
+	
+	@media (max-width: 797px) {
+		#hacka-about > .half{
+			float:none;
+			width:97%;
+			margin:auto;
+		}
+		#hacka-about .info.i1{width:49%;}
+		#hacka-about .info.i2{
+			margin-right:0;
+			margin-left:0;
+			float:left;
+			width:49%;
+		}
+		#hacka-about .info.i3{width:100%;float:none;}
+
+	}
+	@media (max-width: 600px) {
+
+		#hacka-about .new-events .event{float:none !important;width:100%;}
+	}
+
+	@media (max-width: 500px) {
+		#header{
+			text-align:center;
+			background-position:center 10px;
+			padding-bottom:30px;
+		}
+		#header #mini-logo{top:10px;display:block;position:static;margin-bottom:20px;}
+	}
+	
+	
+	@media (max-width: 445px) {
+		#hacka-about .info{width:100% !important;float:none !important;}
+		#footer1>div{background-position:center 10px;}
+	}
+	
+	
+	
+	
+	
+</style>
+</head>
+
+<body>
+	
+    <div id="header" >
+    	<a href="" id="mini-logo" title="هاکا گلوبال"><img src="pic/hacka-mini-logo.jpg" border="0"  /></a>
+    	<a  class="btn">ورود</a>
+    	<a   class="btn">ثبت نام</a>
+    </div>
+
+
+	<div id="page">
 		
-	</head>
-	<body>
-		
-		<div class="errors">
-			{{flash.error}}	
-		</div>
-		
-		<div class='main-content'>
-			{% block content %} {% endblock %}			
-		</div>
-		
-	</body>
+		<div id="header-logo">
+			<img src="pic/hl.jpg"  class="hlpic" />
+        </div>        
+                
+        
+        
+        <div id="hacka-about" class="clear">
+        	<div class="right half">
+            	<h2>هاکا گلوبال چیست؟</h2>
+            	یک نبرد بین المللی برنامه نویسی جهت هم افزایی و شبکه سازی در بین جامعه برنامه نویسان در کل دنیاست، که تاکنون در چندین شهر دنیا برگزار شده است. تعداد هاکاسیتی ها در حال افزایش است و در آینده‌ی نردیک نیز افرادی از هر هاکاسیتی  در یک هاکاتون جهانی به نام هاکاگلوبال شرکت میکنند که در یک شهر توریستی برگزار میشود.
+            </div>    
+            <div class="left half">
+            	<img src="pic/hacka-logo.jpg" />
+            </div>
+        
+        	<div class="clear-both"></div>
+        
+        	<div class="info i1"><h2>رقابت</h2><span>رقابتی زیبا و سالم بین برنامه نویسان</span></div>
+        	<div class="info i2"><h2>شبکه سازی</h2><span>رقابتی زیبا و سالم بین برنامه نویسان</span></div>
+        	<div class="info i3"><h2>توسعه</h2><span>رقابتی زیبا و سالم بین برنامه نویسان</span></div>
+        
+        	<div class="clear-both"></div>
+            
+            <div class="new-events clear">
+            	
+                <div class="event clear">
+                	<img src="pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
+                	<h2>رویداد اصفهان</h2>
+                	<span>تاریخ برگزاری 28 آبان 1393</span>
+                    <div class="keys"><a class="btn" >ثبت نام کنید</a><a class="btn" >بیشتر بخوانید</a></div>
+                </div>
+                
+                <div class="event clear">
+                	<img src="pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
+                	<h2>رویداد اصفهان</h2>
+                	<span>تاریخ برگزاری 28 آبان 1393</span>
+                    <div class="keys"><a class="btn" >ثبت نام کنید</a><a class="btn" >بیشتر بخوانید</a></div>
+                </div>
+
+                <div class="event clear">
+                	<img src="pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
+                	<h2>رویداد اصفهان</h2>
+                	<span>تاریخ برگزاری 28 آبان 1393</span>
+                    <div class="keys"><a class="btn" >ثبت نام کنید</a><a class="btn" >بیشتر بخوانید</a></div>
+                </div>
+
+                <div class="event clear">
+                	<img src="pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
+                	<h2>رویداد اصفهان</h2>
+                	<span>تاریخ برگزاری 28 آبان 1393</span>
+                    <div class="keys"><a class="btn" >ثبت نام کنید</a><a class="btn" >بیشتر بخوانید</a></div>
+                </div>
+            
+            </div>
+			<a class="btn large" >مشاهده رویدادهای پیشین</a>        
+        
+        </div>
+        
+        
+        <div id="content">
+			
+			{% block content %} {% endblock %}	
+        
+        </div>
+        
+        
+
+	</div>
+
+
+	<div id="footer1"><div>
+		<a href="#" class="page-up" ></a>
+        <a href="" >ورود</a>
+		<a href="" >ثبت نام</a>
+		<a href="" >خانه</a>
+		<a href="" >رویداد</a>
+        
+	</div></div>
+
+
+	<div id="footer2"><div>
+
+	</div></div>
+
+
+</body>
 </html>
-{% block content %} {% endblock %}

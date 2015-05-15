@@ -1,15 +1,29 @@
 {% extends "layouts/default.twig" %}
 
 {% block content %}
-    <form action="" method="post">
-        <input type="text" name="firstName" id="firstName" title="First Name" value="{{ user.firstName }}" />
-        <br/>
-        <input type="text" name="lastName" id="lastName" title="Last Name" value="{{ user.lastName }}" />
-        <br/>
-        <input type="text" name="cellPhone" id="cellPhone" title="Cell Phone" value="{{ user.cellPhone }}" />
-        <br/>
-        <input type="text" name="password" id="password" title="Password" value="" />
-        <br/>
-        <input type="submit" value="Update"/>
-    </form>
+        	<h1 class="content-header">ویرایش پروفایل</h1>
+            <form action="" method="post" id="edit-profile" class="clear">
+         
+                <div class="form-obj">
+                    <span class="require">نام : *</span>
+                	<input type="text" name="firstName" id="firstName" title="First Name" value="{{ user.firstName }}" />
+                </div>
+                <div class="form-obj">
+                    <span class="require">نام خانوادگی : *</span>
+                	<input type="text" name="lastName" id="lastName" title="Last Name" value="{{ user.lastName }}" />
+                </div>
+                <div class="form-obj">
+                    <span class="require">شماره تلفن : *</span>
+                	<input type="text" name="cellPhone" id="cellPhone" title="Cell Phone" value="{{ user.cellPhone }}" />
+                </div>
+                <div class="form-obj">
+                    <span class="require">رمز عبور : *</span>
+                	<input type="text" name="password" id="password" title="Password" value="" />
+				</div>
+                
+                <div class="form-obj submit">               
+	                <input type="submit" value="ثبت نام" class="signup"/>
+                </div>
+            </form>
+
 {% endblock %}
