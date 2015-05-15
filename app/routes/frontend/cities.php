@@ -4,6 +4,8 @@
 // Defined route for event of any sities
 $app-> get('/:city/event', function ($city) use ($app) {
 	
+	
+	
 	//search cities Id from cities name 
 	$city_id = R::find('cities', 'name >= :name', array(
 	'name' => $city));
@@ -28,12 +30,12 @@ $app-> get('/:city/event', function ($city) use ($app) {
 	
 	//send all paraneter to view for parsing
 	$render_param = array(
-		'city'  => $city
+		'city'  => $city,
 		'event' => $event
 	);
 	
 	
-	print_r($cities); exit;
+	// print_r($cities); exit;
 	
 	
 
