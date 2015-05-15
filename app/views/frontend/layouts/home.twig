@@ -1,0 +1,60 @@
+{% extends "layouts/default.twig" %}
+
+{% block home %}
+
+        <div id="hacka-about" class="clear">
+        	<div class="right half">
+            	<h2>هاکا گلوبال چیست؟</h2>
+            	یک نبرد بین المللی برنامه نویسی جهت هم افزایی و شبکه سازی در بین جامعه برنامه نویسان در کل دنیاست، که تاکنون در چندین شهر دنیا برگزار شده است. تعداد هاکاسیتی ها در حال افزایش است و در آینده‌ی نردیک نیز افرادی از هر هاکاسیتی  در یک هاکاتون جهانی به نام هاکاگلوبال شرکت میکنند که در یک شهر توریستی برگزار میشود.
+            </div>    
+            <div class="left half">
+            	<img src="{{siteUrl("/public/frontend/assets")}}/pic/hacka-logo.jpg" />
+            </div>
+        
+        	<div class="clear-both"></div>
+        
+        	<div class="info i1"><h2>رقابت</h2><span>رقابتی زیبا و سالم بین برنامه نویسان</span></div>
+        	<div class="info i2"><h2>شبکه سازی</h2><span>رقابتی زیبا و سالم بین برنامه نویسان</span></div>
+        	<div class="info i3"><h2>توسعه</h2><span>رقابتی زیبا و سالم بین برنامه نویسان</span></div>
+        
+        	<div class="clear-both"></div>
+            
+            <div class="new-events clear">
+            	
+            	
+            	{% block eventlist %} {% endblock %}
+            	
+                <div class="event clear">
+                	<img src="{{siteUrl("/public/frontend/assets")}}/pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
+                	<h2>رویداد اصفهان</h2>
+                	<span>تاریخ برگزاری 28 آبان 1393</span>
+                    <div class="keys"><a class="btn" >ثبت نام کنید</a><a class="btn" >بیشتر بخوانید</a></div>
+                </div>
+                
+                <div class="event clear">
+                	<img src="{{siteUrl("/public/frontend/assets")}}/pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
+                	<h2>رویداد اصفهان</h2>
+                	<span>تاریخ برگزاری 28 آبان 1393</span>
+                    <div class="keys"><a class="btn" >ثبت نام کنید</a><a class="btn" >بیشتر بخوانید</a></div>
+                </div>
+
+                <div class="event clear">
+                	<img src="{{siteUrl("/public/frontend/assets")}}/pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
+                	<h2>رویداد اصفهان</h2>
+                	<span>تاریخ برگزاری 28 آبان 1393</span>
+                    <div class="keys"><a class="btn" >ثبت نام کنید</a><a class="btn" >بیشتر بخوانید</a></div>
+                </div>
+
+                <div class="event clear">
+                	<img src="{{siteUrl("/public/frontend/assets")}}/pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
+                	<h2>رویداد اصفهان</h2>
+                	<span>تاریخ برگزاری 28 آبان 1393</span>
+                    <div class="keys"><a class="btn" >ثبت نام کنید</a><a class="btn" >بیشتر بخوانید</a></div>
+                </div>
+            
+            </div>
+			<a class="btn large" href="{{siteUrl('events/index')}}">مشاهده رویدادهای پیشین</a>        
+        
+        </div>
+
+{% endblock %}

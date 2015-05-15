@@ -4,3 +4,4 @@
 require MAIN_PATH . '/routes/frontend/users.php';
 require MAIN_PATH . '/routes/frontend/events.php';
 require MAIN_PATH . '/routes/frontend/cities.php';
+require MAIN_PATH . '/routes/frontend/home.php';
