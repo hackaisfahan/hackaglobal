@@ -1,8 +1,24 @@
 <?php
 
+// Defined route for admin events index
+$app->get('/events', function () use ($app) {
+
+    // Set page title for view
+    $app->view()->setData('pageTitle', _('Events index'));
+
+    // Get total events for now
+    $events = R::find('events');
+
+    // Render index using events data
+    $app->render('events/index.twig', compact('events'));
+
+})->name('admin/events/index');
 
 // Defined route for admin create event
 $app->map('/events/create', function () use ($app) {
+
+    // Set page title for view
+    $app->view()->setData('pageTitle', _('Events create'));
 
     // Check if request is get and render login template
     if ($app->request->isGet()) {
@@ -62,7 +78,7 @@ $app->map('/events/create', function () use ($app) {
 
         
         // Redirect to the admin route
-    	// $app->redirect($app->urlFor('admin/events/index'));
+    	 $app->redirect($app->urlFor('admin/events/index'));
 
     } catch (\RedBeanPHP\RedException $e) {
         // Rollback and display error as flash message and stay
@@ -73,3 +89,19 @@ $app->map('/events/create', function () use ($app) {
     
 
 })->via('GET', 'POST')->name('admin/events/create');
+
+// Defined route for admin update event
+$app->map('/events/update/:id', function ($id) use ($app) {
+
+    // Set page title for view
+    $app->view()->setData('pageTitle', _('Event update'));
+
+    // Check if request is get and render login template
+    if ($app->request->isGet()) {
+        $cities = R::find('cities');
+        $event = R::load('events', $id);
+        $app->render('events/create.twig', compact('event', 'cities'));
+        return;
+    }
+
+})->via('GET', 'POST')->name('admin/events/update');

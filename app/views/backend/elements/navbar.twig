@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{#{{ siteUrl('/admin/events/index') }}#}"> {% trans "Control Panel" %} </a>
+            <a class="navbar-brand" href="{{ siteUrl('/admin/events') }}"> {% trans "Control Panel" %} </a>
         </div>
         <div class="navbar-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
@@ -15,7 +15,7 @@
                         {% trans "Events" %} <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ siteUrl('/admin/events/index') }}">{% trans "Events index" %}</a></li>
+                        <li><a href="{{ siteUrl('/admin/events') }}">{% trans "Events index" %}</a></li>
                         <li><a href="{{ siteUrl('/admin/events/create') }}">{% trans "Add new event" %}</a></li>
                     </ul>
                 </li>
