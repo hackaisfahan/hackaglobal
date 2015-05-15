@@ -23,25 +23,6 @@ $app->map ('/cities/create', function () use ($app) {
     $city->name = (string)$app->request()->post('name');
 	
 	
-	
-	R::begin();
-    try {
-        // Store user to the table and redirect to the index
-        R::store($city);
-        R::commit();
-
-        
-        // Redirect to the admin route
-    	 $app->redirect($app->urlFor('admin/events/index'));
-
-    } catch (\RedBeanPHP\RedException $e) {
-        // Rollback and display error as flash message and stay
-        R::rollback();
-        $app->flash('error', _('Something went wrong. Please try again.'));
-        // $app->redirect($app->urlFor('admin/events/index'));
-    }
-	
-	
 	// $city -> organizer = $_SESSION['auth']
     
 	
