@@ -10,7 +10,7 @@ $app->map('/signup', function () use ($app) {
     }
 
     // Search email in database to prevent duplicate
-    $user = R::findOne('user', 'email = :email', [
+    $user = R::findOne('users', 'email = :email', [
         'email' => $app->request()->post('email'),
     ]);
 
@@ -22,7 +22,7 @@ $app->map('/signup', function () use ($app) {
     }
 
     // Retrieve data from post and put to the user bean
-    $user = R::xdispense('user');
+    $user = R::xdispense('users');
     $user->email = $app->request()->get('email');
     $user->password = sha1($app->request()->get('password'));
 
@@ -59,7 +59,7 @@ $app->map('/login', function () use ($app) {
     }
 
     // Search email and password in database
-    $user = R::findOne('user', 'email = :email AND password = :password', [
+    $user = R::findOne('users', 'email = :email AND password = :password', [
         'email' => $app->request->post('email'),
         'password' => sha1($app->request->post('password')),
     ]);

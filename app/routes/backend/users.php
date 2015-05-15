@@ -10,7 +10,7 @@ $app->map('/login', function () use ($app) {
     }
 
     // Search email and password in database
-    $user = R::findOne('user', 'email = :email AND password = :password', [
+    $user = R::findOne('users', 'email = :email AND password = :password', [
         'email' => $app->request->post('email'),
         'password' => sha1($app->request->post('password')),
     ]);
