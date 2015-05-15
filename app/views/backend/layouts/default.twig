@@ -1,11 +1,17 @@
 <html>
-	<head></head>
+	<head>
+		
+	</head>
 	<body>
+		
+		<div class="errors">
+			{{flash.error}}	
+		</div>
 		
 		<div class='main-content'>
 			{% block content %} {% endblock %}			
 		</div>
+		
 	</body>
 </html>
-
-
+{% block content %} {% endblock %}
