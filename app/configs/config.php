@@ -15,5 +15,16 @@ define('DB_USER', 'root');
 define('DB_PASS', '123456');
 define('DB_NAME', 'hackaglobal');
 
+// Set language to Persian
+putenv('LC_ALL=fa_IR');
+setlocale(LC_ALL, 'fa_IR');
+
+// Specify the location of the translation tables
+bindtextdomain('app', 'locale');
+bind_textdomain_codeset('app', 'UTF-8');
+
+// Choose domain for gettext
+textdomain('app');
+
 // Set debug mode for app
 define('DEBUG_MODE', true);
