@@ -1,8 +1,11 @@
 {% extends "layouts/default.twig" %}
-<form action="">
-    <input type="email" name="email" id="email"/>
-    <br/>
-    <input type="password" name="password" id="password"/>
-    <br/>
-    <input type="submit" value="Submit"/>
-</form>
+
+{% block content %}
+    <form action="">
+        <input type="email" name="email" id="email"/>
+        <br/>
+        <input type="password" name="password" id="password"/>
+        <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+{% endblock %}
