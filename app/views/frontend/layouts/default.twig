@@ -174,7 +174,19 @@
 	
 	
 	
+	.event .keys A.green{background:#090 !important;}
+	
+	
 </style>
+<script src="{{siteUrl("/public/frontend/assets")}}/js/jquery.min.js"></script>
+<script>
+	jQuery(document).ready(function(e) {
+        jQuery(".event .keys A").on( "click",function(){
+			jQuery(this).toggleClass('green');
+		});
+    });
+
+</script>
 </head>
 
 <body>
