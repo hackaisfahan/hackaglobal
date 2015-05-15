@@ -2,7 +2,7 @@
 
 
 // Defined route for admin create event
-$app->map ('/cities/index', function () use ($app) {
+$app->map ('/cities/create', function () use ($app) {
 	
 
     // Check if request is get create grid list of cities 

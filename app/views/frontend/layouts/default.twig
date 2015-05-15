@@ -181,8 +181,8 @@
 	
     <div id="header" >
     	<a href="" id="mini-logo" title="هاکا گلوبال"><img src="{{siteUrl("/public/frontend/assets")}}/pic/hacka-mini-logo.jpg" border="0"  /></a>
-    	<a  class="btn">ورود</a>
-    	<a   class="btn">ثبت نام</a>
+    	<a  class="btn" href="{{siteUrl('login')}}">ورود</a>
+    	<a   class="btn" href="{{siteUrl('signup')}}">ثبت نام</a>
     </div>
 
 
@@ -192,11 +192,9 @@
 			<img src="{{siteUrl("/public/frontend/assets")}}/pic/hl.jpg"  class="hlpic" />
         </div>        
                 
-        
                 
         {% block home %} {% endblock %}
         <div id="content">
-			
 			
 			{% block content %} {% endblock %}	
         
