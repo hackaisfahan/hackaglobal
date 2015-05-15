@@ -4,6 +4,8 @@
 // Defined route for event of any sities
 $app-> get('/:city/event', function ($city) use ($app) {
 	
+	
+	
 	//search cities Id from cities name 
 	$city_id = R::find('cities', 'name >= :name', array(
 	'name' => $city));
@@ -33,4 +35,5 @@ $app-> get('/:city/event', function ($city) use ($app) {
 	);
 	
 	
+
 });
