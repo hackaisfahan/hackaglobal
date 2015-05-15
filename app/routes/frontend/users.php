@@ -3,7 +3,7 @@
 // Defined route for signup of users
 $app->map('/signup', function () use ($app) {
 
-    // Check if request is get and render login template
+    // Check if request is get and render signup template
     if ($app->request()->isGet()) {
         $app->render('users/signup.twig');
         return;
@@ -22,6 +22,7 @@ $app->map('/signup', function () use ($app) {
     }
 
     // Retrieve data from post and put to the user bean
+    /** @noinspection PhpUndefinedMethodInspection */
     $user = R::xdispense('users');
     $user->email = $app->request()->post('email');
     $user->password = sha1($app->request()->post('password'));
@@ -81,3 +82,45 @@ $app->map('/login', function () use ($app) {
     $app->redirect($app->urlFor('users/index'));
 
 })->via('GET', 'POST')->name('users/login');
+
+// Defined route for profile of users
+$app->map('/profile', function () use ($app) {
+
+    // Get access to the user bean using current user email
+    $user = R::findOne('users', 'email = :email', [
+        'email' => $_SESSION['auth']['email']
+    ]);
+
+    // Check if request is get and render login template
+    if ($app->request()->isGet()) {
+        $app->render('users/profile.twig', compact('user'));
+        return;
+    }
+
+    /** @noinspection PhpUndefinedMethodInspection */
+    // Retrieve data from post and put to the user bean
+    $user->firstName = $app->request()->post('firstName');
+    $user->lastName = $app->request()->post('lastName');
+    $user->cellPhone = $app->request()->post('cellPhone');
+
+    // Check if password field is not empty update new password
+    if (!empty($app->request()->post('password'))) {
+        $user->password = sha1($app->request()->post('password'));
+    }
+
+    R::begin();
+    try {
+        // Store user to the table and redirect to the index
+        R::store($user);
+        R::commit();
+
+        $app->redirect($app->urlFor('users/index'));
+    } catch (\RedBeanPHP\RedException $e) {
+        // Rollback and display error as flash message and stay
+        R::rollback();
+        $app->flash('error', _('Something went wrong. Please try again.'));
+        $app->redirect($app->urlFor('users/index'));
+    }
+
+})->via('GET', 'POST')->name('users/profile');;
+
