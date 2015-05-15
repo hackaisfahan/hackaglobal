@@ -19,7 +19,7 @@ $app->map('/events/create', function () use ($app) {
     $event->name = $app->request()->post('name');
     $event->desciption = $app->request()->post('description');
 
-	$event -> city_id = $app -> request() -> post('city_id');
+	$event -> cities_id = $app -> request() -> post('cities_id');
 	$event -> startData = $app -> request() -> post('start_data');
 	$event -> endData = $app -> request() -> post('end_data');
 	$event -> startTime = $app -> request() -> post('start_time');
@@ -36,13 +36,13 @@ $app->map('/events/create', function () use ($app) {
 
         
         // Redirect to the admin route
-    	$app->redirect($app->urlFor('admin/events/index'));
+    	// $app->redirect($app->urlFor('admin/events/index'));
 
     } catch (\RedBeanPHP\RedException $e) {
         // Rollback and display error as flash message and stay
         R::rollback();
         $app->flash('error', _('Something went wrong. Please try again.'));
-        $app->redirect($app->urlFor('users/index'));
+        // $app->redirect($app->urlFor('admin/events/index'));
     }
     
 
