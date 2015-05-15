@@ -36,11 +36,11 @@ $app->map('/events/create', function () use ($app) {
 	$app->flash('error', _('Something went wrong. Please try again.'));
 	
 	//implode start and end date for create simple timeStamp in table
-	$start_time = implode(" ", array($app -> request() -> post('start_data'), $app -> request() -> post('start_time')));
-	$end_time = implode(" ", array($app -> request() -> post('end_data'), $app -> request() -> post('end_time')));
+	$start_time = implode(" ", array($app -> request() -> post('start_date'), $app -> request() -> post('start_time')));
+	$end_time = implode(" ", array($app -> request() -> post('end_date'), $app -> request() -> post('end_time')));
 	
-	$event -> startData = new DateTime($start_time);
-	$event -> endData = new DateTime($end_time);
+	$event -> start_date = new DateTime($start_time);
+	$event -> end_date = new DateTime($end_time);
 	
 	$event -> address = (string)$app -> request() -> post('address');
 	
