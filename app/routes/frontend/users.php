@@ -23,8 +23,8 @@ $app->map('/signup', function () use ($app) {
 
     // Retrieve data from post and put to the user bean
     $user = R::xdispense('users');
-    $user->email = $app->request()->get('email');
-    $user->password = sha1($app->request()->get('password'));
+    $user->email = $app->request()->post('email');
+    $user->password = sha1($app->request()->post('password'));
 
     R::begin();
     try {
