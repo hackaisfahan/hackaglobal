@@ -28,13 +28,9 @@ $app-> get('/:city/event', function ($city) use ($app) {
 	
 	//send all paraneter to view for parsing
 	$render_param = array(
-		'city'  => $city
+		'city'  => $city,
 		'event' => $event
 	);
 	
 	
-	print_r($cities); exit;
-	
-	
-
 });
