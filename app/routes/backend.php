@@ -32,10 +32,10 @@ $app->group(
         }
 
         // Check if user not authenticated and redirect to login
-        if (!isset($_SESSION['auth'])) {
-            $app->flash('error', _('Login required'));
-            $app->redirect($app->urlFor('admin/users/login'));
-        }
+        // if (!isset($_SESSION['auth'])) {
+            // $app->flash('error', _('Login required'));
+            // $app->redirect($app->urlFor('admin/users/login'));
+        // }
 
     },
     function () use ($app) {
