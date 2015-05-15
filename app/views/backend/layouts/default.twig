@@ -1,16 +1,29 @@
-<html>
-	<head>
-		
-	</head>
-	<body>
-		
-		<div class="errors">
-			{{flash.error}}	
-		</div>
-		
-		<div class='main-content'>
-			{% block content %} {% endblock %}			
-		</div>
-		
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% trans "Control Panel" %} - {% trans pageTitle %}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ siteUrl('/') }}public/backend/assets/css/lib.min.css"/>
+    {% block style %}{% endblock %}
+    <link rel="stylesheet" href="{{ siteUrl('/') }}public/backend/assets/css/app.min.css"/>
+
+    <script src="{{ siteUrl('/') }}public/backend/assets/js/lib.min.js"></script>
+    {% block script %}{% endblock %}
+    <script src="{{ siteUrl('/') }}public/backend/assets/js/app.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="//cdn.rawgit.com/scottjehl/Respond/master/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+{% block content %}{% endblock %}
+
+</body>
 </html>

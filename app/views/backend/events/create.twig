@@ -1,26 +1,101 @@
 {% extends "layouts/default.twig" %}
-{% block content %}
-<form method="post">
+{% include 'elements/navbar.twig' %}
 
-	<input type="text" name="name"/>
-	<input type="text" name="description"/>
-	<select>
-		<option value='1' >isfahan</option>
-		<option value='2' >shiraz</option>
-	</select>
-	<input  type="file" name="file"/>
-	<input type="text" name="start_date" value="{{date}}"/>
-	<input type="text" name="end_date" value="{{date}}"/>
-	<input type="text" name="start_time" value="{{time}}"/>
-	<input type="text" name="end_time" value="{{time}}"/>
-	<input type="text" name="address"/>
-	
-	<input type="text" name="twitter" value="http://twitter.com/hackatehran"/>
-	<input type="text" name="facebook" value="http://fb.com/hackatehran"/>
+<div id="wrapper" class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			{% include 'elements/alert.twig' %}
 
-	<br/>
-	<input type="submit" value="Submit"/>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					{% trans pageTitle %}
+				</div>
 
-</form>
+				<div class="panel-body">
 
- {% endblock %} 
+					<form method="post">
+						<div class="form-group">
+							<label for="name" class="col-sm-2 control-label">{% trans "Name" %}</label>
+
+							<div class="col-sm-10">
+								<input name="name" value="{{ event.name }}" type="text" class="form-control" id="name" placeholder="{% trans "Title" %}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="description" class="col-sm-2 control-label">{% trans "Description" %}</label>
+
+							<div class="col-sm-10">
+								<textarea name="text" class="form-control" rows="10" id="description" placeholder="{% trans "Text" %}">{{ attache.text }}</textarea>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="type" class="col-sm-2 control-label">{% trans "Type" %}</label>
+
+							<div class="col-sm-10">
+								<select name="type" class="form-control" id="type">
+									<option value="1" >Isfahan</option>
+									<option value="2" >Shiraz</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="start_date" class="col-sm-2 control-label">{% trans "Start Date" %}</label>
+
+							<div class="col-sm-10">
+								<input name="name" value="{{ event.date }}" type="text" class="form-control" id="start_date" placeholder="{% trans "Start Date" %}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="end_date" class="col-sm-2 control-label">{% trans "End Date" %}</label>
+
+							<div class="col-sm-10">
+								<input name="name" value="{{ event.date }}" type="text" class="form-control" id="end_date" placeholder="{% trans "End Date" %}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="start_time" class="col-sm-2 control-label">{% trans "Start Time" %}</label>
+
+							<div class="col-sm-10">
+								<input name="name" value="{{ event.time }}" type="text" class="form-control" id="start_time" placeholder="{% trans "Start Time" %}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="end_time" class="col-sm-2 control-label">{% trans "End Date" %}</label>
+
+							<div class="col-sm-10">
+								<input name="name" value="{{ event.time }}" type="text" class="form-control" id="end_time" placeholder="{% trans "End Date" %}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="address" class="col-sm-2 control-label">{% trans "Address" %}</label>
+
+							<div class="col-sm-10">
+								<input name="name" value="{{ event.address }}" type="text" class="form-control" id="address" placeholder="{% trans "Address" %}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-10 col-sm-offset-2">
+								<button type="reset" class="btn btn-danger pull-left">
+									{% trans "Cancel" %}
+								</button>
+								<button type="submit" class="btn btn-success">
+									{% trans "Submit" %}
+								</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
