@@ -1,5 +1,18 @@
 {
-    "require": {
-        "slim/slim": "~2.0"
+  "require": {
+    "slim/slim": "~2.0"
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "redbeanphp",
+        "version": "master",
+        "dist": {
+          "url": "http://www.redbeanphp.com/downloadredbean.php",
+          "type": "tar"
+        }
+      }
     }
+  ]
 }
