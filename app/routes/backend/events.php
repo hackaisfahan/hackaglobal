@@ -6,7 +6,6 @@ $app->map('/events/create', function () use ($app) {
 
     // Check if request is get and render login template
     if ($app->request->isGet()) {
-    			
 		$cities = R::find('cities');
 		
     	$param = array(
@@ -14,9 +13,9 @@ $app->map('/events/create', function () use ($app) {
 			'date' => date(FULL_DATE),
 			'cities' => $cities,
 		); 	
-		
-    	
-        $app->render('backend/events/create.twig', $param);
+
+        $app->render('events/create.twig', $param);
+
         return;
     }
 	

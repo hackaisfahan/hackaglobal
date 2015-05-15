@@ -5,7 +5,7 @@ $app->map('/login', function () use ($app) {
 
     // Check if request is get and render login template
     if ($app->request->isGet()) {
-        $app->render('backend/users/login.twig');
+        $app->render('users/login.twig');
         return;
     }
 
