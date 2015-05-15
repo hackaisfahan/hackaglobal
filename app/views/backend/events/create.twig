@@ -1,0 +1,22 @@
+{% extends "backend/layouts/default.twig" %}
+{% block content %}
+<form method="post">
+
+	<input type="text" name="name"/>
+	<input type="text" name="description"/>
+	<select>
+		<option value='1' >isfahan</option>
+		<option value='2' >shiraz</option>
+	</select>
+	<input type="text" name="start_date" value="{{date}}"/>
+	<input type="text" name="end_date" value="{{date}}"/>
+	<input type="text" name="start_time" value="{{time}}"/>
+	<input type="text" name="end_time" value="{{time}}"/>
+	<input type="text" name="address"/>
+
+	<br/>
+	<input type="submit" value="Submit"/>
+
+</form>
+
+ {% endblock %} 
