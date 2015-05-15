@@ -8,6 +8,8 @@ $app -> get('/events/index', function() use($app){
 		'time' => time(),
 	]) ;
 	
+	var_dump($events); exit;
+	
 	
 	//if don't return any event create an error
 	if ($events == false) {
