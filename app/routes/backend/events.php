@@ -11,25 +11,30 @@ $app->map('/events/create', function () use ($app) {
     }
 	
 	
-	// Retrieve data from post and put to the user bean
+	// Retrieve data from post and put to the events bean
+	/**
+	 * cityId have realation to cities bean tables
+	 */
     $event = R::xdispense('events');
     $event->name = $app->request()->post('name');
     $event->desciption = $app->request()->post('description');
 
-	print_r($event); exit;
+	$event -> city_id = $app -> request() -> post('city_id');
+	$event -> startData = $app -> request() -> post('start_data');
+	$event -> endData = $app -> request() -> post('end_data');
+	$event -> startTime = $app -> request() -> post('start_time');
+	$event -> endTime = $app -> request() -> post('end_time');
+	
+	$event -> address = $app -> request() -> post('address');
+	
 
     R::begin();
     try {
         // Store user to the table and redirect to the index
-        R::store($user);
+        R::store($event);
         R::commit();
 
-        // Initialize auth session with user infractions
-        $auth = [
-            'email' => $user->email,
-        ];
-        $_SESSION['auth'] = $auth;
-
+        
         // Redirect to the admin route
     	$app->redirect($app->urlFor('admin/events/index'));
 
