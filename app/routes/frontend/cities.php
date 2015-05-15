@@ -35,8 +35,5 @@ $app-> get('/:city/event', function ($city) use ($app) {
 	);
 	
 	
-	// print_r($cities); exit;
-	
-	
 
 });
