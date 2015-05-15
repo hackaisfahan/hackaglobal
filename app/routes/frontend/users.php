@@ -4,14 +4,14 @@
 $app->map('/signup', function () use ($app) {
 
     // Check if request is get and render login template
-    if ($app->request->isGet()) {
-        $app->render('users/signup.twig');
+    if ($app->request()->isGet()) {
+        $app->render('frontend/users/signup.twig');
         return;
     }
 
     // Search email in database to prevent duplicate
     $user = R::findOne('user', 'email = :email', [
-        'email' => $app->request->post('email'),
+        'email' => $app->request()->post('email'),
     ]);
 
     // Redirect to signup page with error if user exist
@@ -54,7 +54,7 @@ $app->map('/login', function () use ($app) {
 
     // Check if request is get and render login template
     if ($app->request->isGet()) {
-        $app->render('users/login.twig');
+        $app->render('frontend/users/login.twig');
         return;
     }
 

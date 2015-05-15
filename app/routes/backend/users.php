@@ -1,11 +1,11 @@
 <?php
 
 // Defined route for admin login of users
-$app->map('/admin/login', function () use ($app) {
+$app->map('/login', function () use ($app) {
 
     // Check if request is get and render login template
     if ($app->request->isGet()) {
-        $app->render('admin/users/login.twig');
+        $app->render('backend/users/login.twig');
         return;
     }
 
