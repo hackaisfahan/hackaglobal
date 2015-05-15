@@ -28,3 +28,11 @@ textdomain('app');
 
 // Set debug mode for app
 define('DEBUG_MODE', true);
+
+//full format type for date
+define('FULL_DATE' , 'Y-m-d');
+
+//full format type for time
+define('FULL_TIME' , 'H:i:s');
+
+

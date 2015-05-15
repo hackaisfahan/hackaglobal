@@ -6,7 +6,17 @@ $app->map('/events/create', function () use ($app) {
 
     // Check if request is get and render login template
     if ($app->request->isGet()) {
-        $app->render('backend/events/create.twig');
+    			
+		$cities = R::find('cities');
+		
+    	$param = array(
+			'time' => date(FULL_TIME),
+			'date' => date(FULL_DATE),
+			'cities' => $cities,
+		); 	
+		
+    	
+        $app->render('backend/events/create.twig', $param);
         return;
     }
 	
@@ -23,14 +33,16 @@ $app->map('/events/create', function () use ($app) {
 
 	$event -> cities_id = $app -> request() -> post('cities_id');
 	
-	$event -> startData = strtotime($app -> request() -> post('start_data'));
-	$event -> endData = strtotime($app -> request() -> post('end_data'));
-	$event -> startTime = $app -> request() -> post('start_time');
-	$event -> endTime = $app -> request() -> post('end_time');
+	$app->flash('error', _('Something went wrong. Please try again.'));
+	
+	$start_time = implode(" ", array($app -> request() -> post('start_data'), $app -> request() -> post('start_time')));
+	$end_time = implode(" ", array($app -> request() -> post('end_data'), $app -> request() -> post('end_time')));
+	
+	$event -> startData = new DateTime($start_time);
+	$event -> endData = new DateTime($end_time);
 	
 	$event -> address = (string)$app -> request() -> post('address');
 	
-
     R::begin();
     try {
         // Store user to the table and redirect to the index
