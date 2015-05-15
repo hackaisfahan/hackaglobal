@@ -50,6 +50,7 @@ $app->group(
         // Include backend level routes
         require_once MAIN_PATH . '/routes/backend/users.php';
         require_once MAIN_PATH . '/routes/backend/events.php';
+		require_once MAIN_PATH . '/routes/backend/cities.php';
 
     }
 );
