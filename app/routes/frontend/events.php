@@ -19,3 +19,12 @@ $app -> get('/events/index', function() use ($app) {
 	$app -> render('events/lists.twig', array('events' => $events));
 
 });
+
+
+
+$app -> get('/event/details', function() use ($app) {
+
+	//render list of events
+	$app -> render('events/details.twig', array('events' => $events));
+
+});
