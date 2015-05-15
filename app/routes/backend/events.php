@@ -30,18 +30,17 @@ $app->map('/events/create', function () use ($app) {
     $event->name = (string)$app->request()->post('name');
     $event->desciption = (string)$app->request()->post('description');
 
-	//get cities Id from form and create leation to cities	
+	//get cities Id from form and create relation to cities	
 	$event -> cities_id = $app -> request() -> post('cities_id');
-	
-	$app->flash('error', _('Something went wrong. Please try again.'));
 	
 	//implode start and end date for create simple timeStamp in table
 	$start_time = implode(" ", array($app -> request() -> post('start_date'), $app -> request() -> post('start_time')));
 	$end_time = implode(" ", array($app -> request() -> post('end_date'), $app -> request() -> post('end_time')));
-	
 	$event -> start_date = new DateTime($start_time);
 	$event -> end_date = new DateTime($end_time);
 	
+	
+	//address of event 
 	$event -> address = (string)$app -> request() -> post('address');
 	
     R::begin();
