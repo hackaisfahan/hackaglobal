@@ -21,6 +21,9 @@ $app->map ('/cities/index', function () use ($app) {
 	
 	$city = R::xdispense('cities');
     $city->name = (string)$app->request()->post('name');
+	
+	
+	// $city -> organizer = $_SESSION['auth']
     
 	
 	// to do list 
