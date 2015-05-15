@@ -1,11 +1,27 @@
+{% set pageTitle = 'Login' %}
 {% extends "layouts/default.twig" %}
 
 {% block content %}
-    <form action="" method="post">
-        <input type="email" name="email" id="email" title="Email"/>
-        <br/>
-        <input type="password" name="password" id="password" title="Password"/>
-        <br/>
-        <input type="submit" value="Login"/>
-    </form>
+    <div id="wrapper" class="container">
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 well" style="margin-top: 10%;">
+                <legend>{% trans "Login" %}</legend>
+
+                {% include 'elements/alert.twig' %}
+
+                <form method="post" action="{{ siteUrl('/admin/login') }}" role="form" accept-charset="UTF-8">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" placeholder="{% trans "Email" %}" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="{% trans "Password" %}" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary"> {% trans "Login" %}</button>
+                    {#<a href="{{ siteUrl('/admin/reset') }}" class="btn btn-danger">{% trans "Forget" %}</a>#}
+                </form>
+            </div>
+        </div>
+
+    </div>
 {% endblock %}
