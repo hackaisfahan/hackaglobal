@@ -1,3 +1,4 @@
+{% block eventlist %}
 {% for event in events %}
 <div class="event clear">
 	<img src="{{siteUrl("/public/frontend/assets")}}/pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
@@ -5,16 +6,8 @@
 	<span>{{ event.description|e }}</span>
 	<div class="keys">
 		<a class="btn" href="#">ثبت نام کنید</a>
-		<a class="btn" >بیشتر بخوانید</a>
+		<a class="btn" href="#">بیشتر بخوانید</a>
 	</div>
 </div>
 {% endfor %}
-
-<ul>
-	{% for event in events %}
-	<li>
-		{{ event.name|e }}
-	</li>
-	{% endfor %}
-</ul>
-
+{% endblock %}

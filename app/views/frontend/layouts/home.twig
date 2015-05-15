@@ -22,6 +22,8 @@
             <div class="new-events clear">
             	
             	
+            	{% block eventlist %} {% endblock %}
+            	
                 <div class="event clear">
                 	<img src="{{siteUrl("/public/frontend/assets")}}/pic/Untitled-3.jpg" width="93px" height="93px" class="img" />
                 	<h2>رویداد اصفهان</h2>
@@ -51,7 +53,7 @@
                 </div>
             
             </div>
-			<a class="btn large" >مشاهده رویدادهای پیشین</a>        
+			<a class="btn large" href="{{siteUrl('events/index')}}">مشاهده رویدادهای پیشین</a>        
         
         </div>
 
