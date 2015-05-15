@@ -1,0 +1,20 @@
+<ul>
+    {% for city in cities %}
+        <li>{{ city.name|e }}</li>
+    {% endfor %}
+</ul>
+
+
+<br>
+<div> create new cities access to site</div>
+<form method="post">
+	<input type="text" name="name" />
+	<input type="hidden" name="organizer" />
+	<input type="file" name="logo" />
+	<input type="file" name="picture" />
+	<input type="submit" name="submit" />
+		
+</form>
+
+
+
