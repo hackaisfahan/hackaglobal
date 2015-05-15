@@ -6,7 +6,7 @@ $app->map('/events/create', function () use ($app) {
 
     // Check if request is get and render login template
     if ($app->request->isGet()) {
-        $app->render('backend/events/create.twig');
+        $app->render('events/create.twig');
         return;
     }
 	
