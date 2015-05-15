@@ -9,7 +9,7 @@ $app->hook('slim.before.dispatch', function () use ($app) {
     if (preg_match($adminPattern, $routePattern)) {
         // Change global template path
         $app->config(array(
-            'templates.path' => MAIN_PATH . '/views/backend',
+            'templates.path' => MAIN_PATH . '/views/',
         ));
         // Change twig engine template path
         $app->view->twigTemplateDirs = array(
