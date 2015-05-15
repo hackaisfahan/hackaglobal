@@ -2,13 +2,13 @@
 
 {% block content %}
     <form action="" method="post">
-        <input type="text" name="firstName" id="firstName" title="First Name"/>
+        <input type="text" name="firstName" id="firstName" title="First Name" value="{{ user.firstName }}" />
         <br/>
-        <input type="text" name="lastName" id="lastName" title="Last Name" t/>
+        <input type="text" name="lastName" id="lastName" title="Last Name" value="{{ user.lastName }}" />
         <br/>
-        <input type="text" name="cellPhone" id="cellPhone" title="Cell Phone" t/>
+        <input type="text" name="cellPhone" id="cellPhone" title="Cell Phone" value="{{ user.cellPhone }}" />
         <br/>
-        <input type="text" name="password" id="password" title="Password" t/>
+        <input type="text" name="password" id="password" title="Password" value="" />
         <br/>
         <input type="submit" value="Update"/>
     </form>
