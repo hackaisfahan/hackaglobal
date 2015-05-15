@@ -3,3 +3,11 @@ body, table {
     font-weight: normal;
     font-style: normal;
 }
+
+.yamm .dropdown-menu {
+    right: auto;
+}
+
+#wrapper {
+    padding-top: 80px;
+}
