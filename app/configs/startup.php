@@ -30,7 +30,7 @@ $app = new Slim(array(
     'debug' => DEBUG_MODE,
     'mode' => 'development',
     'cache' => ROOT_PATH . '/cache/twig/',
-    'templates.path' => MAIN_PATH . '/views/frontend',
+    'templates.path' => MAIN_PATH . '/views/',
 ));
 
 // Prepare view
