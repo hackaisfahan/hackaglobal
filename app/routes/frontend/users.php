@@ -124,3 +124,16 @@ $app->map('/profile', function () use ($app) {
 
 })->via('GET', 'POST')->name('users/profile');;
 
+
+// Defined route for logout from backend
+$app->get('/logout', function () use ($app) {
+
+    // Check if user authenticated and unset session
+    if (isset($_SESSION['auth'])) {
+        unset($_SESSION['auth']);
+    }
+
+    // Redirect to the backend login page
+    $app->redirect($app->urlFor('users/login'));
+
+})->name('users/logout');

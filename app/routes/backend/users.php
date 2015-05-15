@@ -32,3 +32,17 @@ $app->map('/login', function () use ($app) {
     $app->redirect($app->urlFor('admin/users/index'));
 
 })->via('GET', 'POST')->name('admin/users/login');
+
+
+// Defined route for logout from backend
+$app->get('/logout', function () use ($app) {
+
+    // Check if user authenticated and unset session
+    if (isset($_SESSION['auth'])) {
+        unset($_SESSION['auth']);
+    }
+
+    // Redirect to the backend login page
+    $app->redirect($app->urlFor('admin/users/login'));
+
+})->name('admin/users/logout');
