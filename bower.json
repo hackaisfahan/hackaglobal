@@ -1,0 +1,26 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "authors": [
+    "Milad Nekofar <milad@nekofar.com>",
+    "Shahab Alem",
+    "Behrooz Abedi",
+    "Saeid Goodarzi"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootswatch-dist": "united",
+    "bootstrap-rtl": "~3.3.1",
+    "bootstrap-filestyle": "~1.1.2",
+    "components-font-awesome": "~4.3.0",
+    "iranian-sans-fontface": "~1.0.2",
+    "jquery": "~1.11.2",
+    "bootbox": "~4.4.0"
+  }
+}

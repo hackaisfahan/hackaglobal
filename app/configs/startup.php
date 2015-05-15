@@ -42,9 +42,11 @@ $app->view->parserOptions = [
     'strict_variables' => false,
     'autoescape' => true,
 ];
-$app->view->parserExtensions = array(
-    new TwigExtension()
-);
+$app->view->parserExtensions = [
+    new TwigExtension(),
+    new Twig_Extensions_Extension_Text(),
+    new Twig_Extensions_Extension_I18n(),
+];
 
 // Added session cookie manager middleware
 $app->add(
