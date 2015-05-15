@@ -14,6 +14,7 @@ require_once VEND_PATH . '/autoload.php';
 // Include configs and startup
 require_once MAIN_PATH . '/configs/config.php';
 require_once MAIN_PATH . '/configs/global.php';
+require_once MAIN_PATH . '/configs/startup.php';
 
 // Include frontend and backend end routes
 require_once MAIN_PATH . '/routes/backend.php';

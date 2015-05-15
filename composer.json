@@ -1,6 +1,28 @@
 {
+  "name": "hackaisfahan/hackaglobal",
+  "description": "",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Milad Nekofar",
+      "email": "milad@nekofar.com"
+    },
+    {
+      "name" : "Shahab Alem"
+    },
+    {
+      "name" : "Behrooz Abedi"
+    },
+    {
+      "name" : "Saeid Goodarzi"
+    }
+  ],
   "require": {
-    "slim/slim": "~2.0"
+    "php": ">=5.3.0",
+    "slim/slim": "~2.0",
+    "slim/views": "~0.1.3",
+    "twig/twig": "~1.0",
+    "redbeanphp": "master"
   },
   "repositories": [
     {
@@ -14,5 +36,11 @@
         }
       }
     }
-  ]
+  ],
+  "autoload": {
+    "files": [
+      "vendor/redbeanphp/rb.php",
+      "include/UUIDWriterMySQL.php"
+    ]
+  }
 }
