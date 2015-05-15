@@ -3,6 +3,9 @@
 // Defined route for admin login of users
 $app->map('/login', function () use ($app) {
 
+    // Set page title for view
+    $app->view()->setData('pageTitle', _('Users login'));
+
     // Check if request is get and render login template
     if ($app->request->isGet()) {
         $app->render('users/login.twig');

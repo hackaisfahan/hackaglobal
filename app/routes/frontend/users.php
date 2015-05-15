@@ -3,6 +3,9 @@
 // Defined route for signup of users
 $app->map('/signup', function () use ($app) {
 
+    // Set page title for view
+    $app->view()->setData('pageTitle', _('Users login'));
+
     // Check if request is get and render signup template
     if ($app->request()->isGet()) {
         $app->render('users/signup.twig');
