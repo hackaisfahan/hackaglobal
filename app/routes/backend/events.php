@@ -14,12 +14,15 @@ $app->map('/events/create', function () use ($app) {
 	// Retrieve data from post and put to the events bean
 	/**
 	 * cityId have realation to cities bean tables
+	 * map geo location don't added to form must be complate in future
 	 */
+	
     $event = R::xdispense('events');
     $event->name = (string)$app->request()->post('name');
     $event->desciption = (string)$app->request()->post('description');
 
 	$event -> cities_id = $app -> request() -> post('cities_id');
+	
 	$event -> startData = strtotime($app -> request() -> post('start_data'));
 	$event -> endData = strtotime($app -> request() -> post('end_data'));
 	$event -> startTime = $app -> request() -> post('start_time');
