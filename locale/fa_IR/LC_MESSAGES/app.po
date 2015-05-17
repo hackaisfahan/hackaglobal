@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hacka Global\n"
+"POT-Creation-Date: 2015-05-16 00:30+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Milad Nekofar <milad@nekofar.com>\n"
+"Language-Team: Milad Nekofar <milad@nekofar.com>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../../../app\n"
+"X-Poedit-SearchPath-1: ../../../cache\n"
+
+#: ../../../app/routes/backend/events.php:7
+#: ../../../cache/twig/a/e/ae334fbfb9e94ac83aea686250c4abb0075382b3cbe2adb89c25f15e6db7f52f.php:48
+msgid "Events index"
+msgstr "لیست ایونت‌ها"
+
+#: ../../../app/routes/backend/events.php:21
+msgid "Events create"
+msgstr "ساختن ایونت"
+
+#: ../../../app/routes/backend/events.php:86
+#: ../../../app/routes/frontend/users.php:50
+#: ../../../app/routes/frontend/users.php:124
+msgid "Something went wrong. Please try again."
+msgstr "مشکلی رخ داد. لطفا مجددا سعی کنید."
+
+#: ../../../app/routes/backend/events.php:97
+msgid "Event update"
+msgstr "به روزرسانی ایونت"
+
+#: ../../../app/routes/backend/users.php:7
+#: ../../../app/routes/frontend/users.php:7
+msgid "Users login"
+msgstr "ورود کاربران"
+
+#: ../../../app/routes/backend/users.php:23
+#: ../../../app/routes/frontend/users.php:73
+msgid "Username or password is wrong."
+msgstr "نام کاربری یا کلمه عبور اشتباه است."
+
+#: ../../../app/routes/frontend/cities.php:16
+msgid "Don't set this cities please check your request"
+msgstr "این شهر را ست نکنید، لطفا درخواست خود را بررسی کنید."
+
+#: ../../../app/routes/frontend/events.php:13
+msgid "don't define any event form now to future"
+msgstr "لطفا ایونتی برای زمان حال تا آینده تعریف نکنید."
+
+#: ../../../app/routes/frontend/users.php:22
+msgid "This email already has been used."
+msgstr "این ایمیل قبلا استفاده شده."
+
+#: ../../../cache/twig/5/a/5a137607848ba69c207afe282c6082dd9235c93d95aff7b8656ef84874c4dd62.php:63
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:57
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:65
+msgid "Name"
+msgstr "نام"
+
+#: ../../../cache/twig/5/a/5a137607848ba69c207afe282c6082dd9235c93d95aff7b8656ef84874c4dd62.php:67
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:103
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:111
+msgid "Start Date"
+msgstr "تاریخ شروع"
+
+#: ../../../cache/twig/5/a/5a137607848ba69c207afe282c6082dd9235c93d95aff7b8656ef84874c4dd62.php:71
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:119
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:127
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:151
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:159
+msgid "End Date"
+msgstr "تاریخ پایان"
+
+#: ../../../cache/twig/5/a/5a137607848ba69c207afe282c6082dd9235c93d95aff7b8656ef84874c4dd62.php:75
+msgid "Actions"
+msgstr "عملیات"
+
+#: ../../../cache/twig/5/a/5a137607848ba69c207afe282c6082dd9235c93d95aff7b8656ef84874c4dd62.php:104
+msgid "Edit"
+msgstr "ویرایش"
+
+#: ../../../cache/twig/7/c/7c60ef4ae28e4d3c569ba6f891bb7f3b4db6ff0b285b3ff8b1259d32f67aae3d.php:27
+#: ../../../cache/twig/a/e/ae334fbfb9e94ac83aea686250c4abb0075382b3cbe2adb89c25f15e6db7f52f.php:31
+msgid "Control Panel"
+msgstr "کنترل پانل"
+
+#: ../../../cache/twig/a/e/ae334fbfb9e94ac83aea686250c4abb0075382b3cbe2adb89c25f15e6db7f52f.php:40
+msgid "Events"
+msgstr "ایونت‌ها"
+
+#: ../../../cache/twig/a/e/ae334fbfb9e94ac83aea686250c4abb0075382b3cbe2adb89c25f15e6db7f52f.php:54
+msgid "Add new event"
+msgstr "افزودن ایونت جدید"
+
+#: ../../../cache/twig/a/e/ae334fbfb9e94ac83aea686250c4abb0075382b3cbe2adb89c25f15e6db7f52f.php:62
+msgid "Cities"
+msgstr "شهر‌ها"
+
+#: ../../../cache/twig/a/e/ae334fbfb9e94ac83aea686250c4abb0075382b3cbe2adb89c25f15e6db7f52f.php:70
+msgid "Cities index"
+msgstr "لیست شهر‌ها"
+
+#: ../../../cache/twig/a/e/ae334fbfb9e94ac83aea686250c4abb0075382b3cbe2adb89c25f15e6db7f52f.php:76
+msgid "Add new city"
+msgstr "افزودن شهر جدید"
+
+#: ../../../cache/twig/a/e/ae334fbfb9e94ac83aea686250c4abb0075382b3cbe2adb89c25f15e6db7f52f.php:86
+msgid "Logout"
+msgstr "خروج"
+
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:73
+msgid "Description"
+msgstr "شرح"
+
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:79
+msgid "Text"
+msgstr "متن"
+
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:89
+msgid "Type"
+msgstr "نوع"
+
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:135
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:143
+msgid "Start Time"
+msgstr "زمان شروع"
+
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:167
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:175
+msgid "Address"
+msgstr "نشانی"
+
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:184
+msgid "Cancel"
+msgstr "لغو"
+
+#: ../../../cache/twig/d/8/d8821a79fa4a7f1d0ad44d022ce95f241736e4bb9226a92a5053d4517d537d7a.php:188
+msgid "Submit"
+msgstr "ثبت"

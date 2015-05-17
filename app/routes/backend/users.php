@@ -3,6 +3,9 @@
 // Defined route for admin login of users
 $app->map('/login', function () use ($app) {
 
+    // Set page title for view
+    $app->view()->setData('pageTitle', _('Users login'));
+
     // Check if request is get and render login template
     if ($app->request->isGet()) {
         $app->render('users/login.twig');
@@ -32,3 +35,17 @@ $app->map('/login', function () use ($app) {
     $app->redirect($app->urlFor('admin/users/index'));
 
 })->via('GET', 'POST')->name('admin/users/login');
+
+
+// Defined route for logout from backend
+$app->get('/logout', function () use ($app) {
+
+    // Check if user authenticated and unset session
+    if (isset($_SESSION['auth'])) {
+        unset($_SESSION['auth']);
+    }
+
+    // Redirect to the backend login page
+    $app->redirect($app->urlFor('admin/users/login'));
+
+})->name('admin/users/logout');
